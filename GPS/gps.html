@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网址导航</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="gps.css">
+
+     <link rel="stylesheet" href="../source/bootstrap.css">
+    <script src="../source/jquery-1.9.1.min.js"></script>
+    <script src="../source/bootstrap.js"></script>
+
+</head>
+<body>
+<div class="container gps">
+    <ul>
+
+        <li class="table-list">常用
+            <ol class="active">
+                <li><a href="www.baidu.com">BaiDu</a></li>
+                <li><a href="www.qq.com">Tengxun</a></li>
+                <li><a href="www.github.com">GitHub</a></li>
+                <li><a href="www.sina.com">sina</a></li>
+            </ol>
+        </li>
+        <li class="table-list">新闻
+            <ol >
+                <li><a href="www.baidu.com">BaiDu</a></li>
+                <li><a href="www.qq.com">Tengxun</a></li>
+                <li><a href="www.github.com">GitHub</a></li>
+                <li><a href="www.sina.com">Sina</a></li>
+            </ol>
+        </li>
+        <li class="table-list">娱乐
+            <ol>
+                <li><a href="www.baidu.com">BaiDu</a></li>
+                <li><a href="www.qq.com">Tengxun</a></li>
+                <li><a href="www.github.com">GitHub</a></li>
+                <li><a href="www.sina.com">Sina</a></li>
+            </ol>
+        </li>
+        <li class="table-list">直播
+            <ol>
+                <li><a href="www.baidu.com">BaiDu</a></li>
+                <li><a href="www.qq.com">Tengxun</a></li>
+                <li><a href="www.github.com">GitHub</a></li>
+                <li><a href="www.sina.com">sina</a></li>
+            </ol>
+        </li>
+        <li class="table-list">体育 <ol>
+            <li><a href="www.baidu.com">BaiDu</a></li>
+            <li><a href="www.qq.com">Tengxun</a></li>
+            <li><a href="www.github.com">GitHub</a></li>
+            <li><a href="www.sina.com">sina</a></li>
+        </ol>
+        </li>
+    </ul>
+
+    <script>
+        $(function(){
+            $('.table-list').each(function(e){
+                $(this).on('mouseenter',function(){
+                    $('.table-list').find('ol').each(function(){
+                       $(this).css('display','none');
+                    });
+
+                    $(this).find('ol').show('speed');
+                  })  ;
+
+            });
+
+//            $('.table-list').each(function(e){
+//                $(this).hover(function(){
+//                    $(this).removeClass();
+//                    console.log('移出');
+//
+//                },function(){
+//                    $(this).addClass('active');
+//                    console.log('移入');
+//
+//                });
+//
+//
+//
+//
+//        });
+        });
+
+    </script>
+
+</div>
+</body>
+</html>
