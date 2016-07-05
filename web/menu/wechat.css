@@ -1,0 +1,40 @@
+
+a, abbr, address, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, label, legend, li, object, ol, p, pre, q, small, span, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, ul {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+header{
+    height: 44px;
+    background-color: #00b38c;
+
+}
+header h3{
+    line-height: 44px;
+    text-align: center;
+    font-size: 22px ;
+}
+ul，ol{
+    list-style: none;
+
+}
+li{
+    float: left;
+    list-style: none;
+}
+.navi ul li{
+    width: 15%;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+}
+.naviActive{
+    color: #00b38c;
+    margin-top :-2px ;
+    border: 2px solid #00b38c;
+    border-radius: 5px;
+
+}
