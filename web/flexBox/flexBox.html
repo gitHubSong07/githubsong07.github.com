@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flexBox布局</title>
+    <meta content="width=device-width,initial-scale=0.6,maximum-scale=1.0,minimum-scale=0.6,user-scalable=no" id="viewport" name="viewport"></head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width:652px ;
+            margin: auto;
+            background-color: #d4d4d4;
+            text-align: center;
+
+        }
+        .item{
+            height: 60px;
+            color: #ddd;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+         }
+        .cont .item:first-child{
+            width: 100px;
+            background-color: #3388cc;
+        }
+        .item2 ,.item3{
+            flex: 1;
+        }
+        .cont .item:nth-child(2){
+            background-color: #00b38c;
+        }
+        .cont .item:last-child{
+            background-color: #4cae4c;
+        }
+        .cont a{
+            color: #00b38c;
+            display: inline-block;
+            text-align: center;
+        }
+         h3{
+            text-align: center;
+        }
+        .cont{
+            display:flex;
+            display: -webkit-flex;
+            width: 600px;
+             padding: 25px ;
+            border:  1px solid #00b38c;
+         }
+        .cont1 .item1 {
+            width: 150px;
+            margin-right: 10px ;
+        }
+        .cont1 .item2{
+            flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+        }
+        .cont1 .item3{
+            margin-left: 10px ;
+            width: 100px;
+        }
+        .cont2{
+            flex-direction: row;
+
+        }
+         .cont2 .item:first-child{
+             flex: 1;
+         }
+        .cont2 .item:nth-child(2){
+            flex: 2;
+        }
+        .cont2 .item:last-child{
+            flex: 3;
+        }
+        .cont3 .item:first-child{
+            flex: 1;
+        }
+        .cont3 .item:nth-child(2){
+            flex: 2;
+        }
+        .cont3 .item:last-child{
+            flex: 3;
+        }
+        .cont3{
+            flex-direction: row-reverse;
+        }
+
+        .cont4{
+            flex-direction: column;
+        }
+        .cont4 .item:first-child{
+            flex: 1;
+        }
+        .cont4 .item:nth-child(2){
+            flex: 2;
+        }
+        .cont4 .item:last-child{
+            flex: 3;
+        }
+
+        .cont5{
+            flex-direction: column-reverse;
+        }
+        .cont5 .item:first-child{
+            flex: 1;
+        }
+        .cont5 .item:nth-child(2){
+            flex: 2;
+        }
+        .cont5 .item:last-child{
+            flex: 3;
+        }
+        .cont6{
+            flex-wrap: nowrap;
+            width: 600px;
+        }
+        .cont6 .item:first-child{
+            width: 200px;
+        }
+        .cont6 .item:nth-child(2){
+            width: 400px;
+        }
+        .cont6 .item:last-child{
+            width: 450px;
+        }
+        .cont7{
+            flex-wrap: wrap;
+            width: 600px;
+        }
+        .cont7 .item:first-child{
+            width: 600px;
+        }
+        .cont7 .item:nth-child(2){
+            width: 400px;
+        }
+        .cont7 .item:last-child{
+            width: 200px;
+        }
+        .cont8{
+            flex-wrap: wrap-reverse;
+            width: 600px;
+        }
+        .cont8 .item:first-child{
+            width: 600px;
+        }
+        .cont8 .item:nth-child(2){
+            width: 400px;
+        }
+        .cont8 .item:last-child{
+            width: 200px;
+        }
+        .cont9{
+            justify-content: flex-end;
+        }
+        .cont9 .item{
+            width: 200px;
+            /*justify-content : flex-start;*/
+        }
+        .cont9 .item:last-child{
+            width: 250px;
+        }
+        .cont10{
+            justify-content: flex-start;
+        }
+        .cont10 .item{
+             width: 200px;
+          }
+        .cont10 .item:last-child{
+            width: 250px;
+         }
+
+        .cont10-1{
+            justify-content: center;
+        }
+        .cont10-1 .item{
+            width: 200px;
+        }
+        .cont10-1 .item:last-child{
+            width: 250px;
+        }
+
+
+
+        .cont11{
+            justify-content: space-between;
+        }
+        .cont11 .item{
+            width: 200px;
+         }
+        .cont11 .item:last-child{
+            width: 250px;
+         }
+        .cont12{
+            justify-content: space-around;
+        }
+        .cont12 .item{
+            width: 200px;
+         }
+        .cont12 .item:last-child{
+            width: 250px;
+        }
+        .cont13{
+            height: 180px;
+        }
+        .cont13 .item{
+            width: 100px;
+            background: #00b38c;
+        }
+        .cont13 .item:nth-child(3){
+            width: 200px;
+            align-self: flex-start;
+            width: 100px;
+        }
+        .cont13 .item:first-child{
+            align-self: flex-end;
+        }
+        .cont13 .item:nth-child(2){
+            align-self: center;
+        }
+
+        .cont13 .item:nth-child(4){
+            align-self: auto;
+        }
+        .cont13 .item:nth-child(5){
+            align-self: baseline;
+        }
+        .cont13 .item:nth-child(6){
+            align-self: stretch;
+        }
+        .cont14 .item {
+            width: 200px;
+        }
+        .cont14{
+            align-items: center;
+            /*所有居中*/
+            height: 120px;
+        }
+        .cont15{
+            align-items: flex-start;
+            /*所有居中*/
+            height: 120px;
+        }
+        .cont16{
+            align-items: flex-end;
+            /*所有居中*/
+            height: 120px;
+        }
+        .cont h1{
+            color: #00b38c;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+   <div class="cont">
+      <h1>flex布局</h1>
+
+   </div>
+    <div class="cont">
+        <div class="item item1">width:100</div>
+        <div class="item item2">flex:1</div>
+        <div class="item item3" >flex:1</div>
+    </div>
+    <div class="cont cont1">
+        <div class="item item1">width:150
+            <br>
+            margin-right: 10px
+        </div>
+        <div class="item item2">flex:1</div>
+        <div class="item item3" >margin-left: 10px <br>
+            width: 150px
+        </div>
+    </div>
+    <div class="cont cont2">
+       <div class="item  ">flex:1</div>
+        <div class="item  ">flex:2</div>
+        <div class="item  " >
+            flex-direction: row;<br>
+            flex:3
+        </div>
+    </div>
+    <div class="cont cont3">
+        <div class="item">flex:1</div>
+        <div class="item">flex:2</div>
+        <div class="item" >
+            flex-direction: row-reverse;<br>
+            flex:3
+        </div>
+    </div>
+    <div class="cont cont4">
+        <div class="item">flex:1</div>
+        <div class="item">flex:2</div>
+        <div class="item">
+            flex-direction: column<br>
+            flex:3
+        </div>
+    </div>
+    <div class="cont cont5">
+        <div class="item">flex:1</div>
+        <div class="item">flex:2</div>
+        <div class="item">
+            flex-direction: column-reverse<br>
+            flex:3
+        </div>
+    </div>
+    <div class="cont cont6">
+        <div class="item">width:200px </div>
+        <div class="item"> width:300px </div>
+        <div class="item">
+            有点小问题：不能撑开 flex-wrap:nowrap<br>
+             width:350px
+        </div>
+    </div>
+    <div class="cont cont7">
+        <div class="item">width:600px </div>
+        <div class="item"> width:400px </div>
+        <div class="item">
+            flex-wrap:wrap<br>
+            width:200px
+        </div>
+    </div>
+    <div class="cont cont8">
+        <div class="item">1 : width:200px </div>
+        <div class="item">2 : width:400px </div>
+        <div class="item"> 3 :
+            flex-wrap:wrap<br>
+            width:450px
+        </div>
+    </div>
+
+    <div class="cont cont9">
+        <div class="item">1 : width:200px </div>
+        <div class="item">2 : width:200px  </div>
+        <div class="item"> 3 :
+            justify-content:flex-start默认defalt
+            相当于float:right<br>
+            width:300px
+        </div>
+    </div>
+
+    <div class="cont cont10">
+        <div class="item">1 : width:200px </div>
+        <div class="item">2 : width:200px  </div>
+        <div class="item"> 3 :
+            justify-content: flex-start;
+            相当于float:left<br>
+            width:450px
+        </div>
+    </div>
+    <div class="cont cont10-1">
+        <div class="item">1 : width:200px </div>
+         <div class="item"> 3 :
+             justify-content: center;
+            居中<br>
+            width:450px
+        </div>
+    </div>
+
+    <div class="cont cont11">
+        <div class="item">1 : width:200px </div>
+         <div class="item"> 3 :
+             justify-content: space-between;
+            相当于两端对其<br>
+            width:450px
+        </div>
+    </div>
+    <div class="cont cont12">
+        <div class="item">1 : width:200px </div>
+        <div class="item">2 : width:200px  </div>
+        <div class="item"> 3 :
+            justify-content: space-around;
+            等宽，均分空出来的宽度
+            width:450px
+        </div>
+    </div>
+
+    <div class="cont cont13">
+        <div class="item">1 : align-self: flex-end;</div>
+        <div class="item">2 : align-self: center;  </div>
+        <div class="item">align-self: flex-start;  </div>
+        <div class="item" style="height: auto;">align-self: auto;  </div>
+        <div class="item" style="height: auto;">align-self: baseline;  </div>
+        <div class="item" style="height: auto;">align-self: stretch;  </div>
+    </div>
+
+    <div class="cont cont14">
+        <div class="item">align-items</div>
+        <div class="item">所有子元素上下居中</div>
+        <div class="item">12</div>
+    </div>
+    <div class="cont cont15">
+        <div class="item">align-items</div>
+        <div class="item">所有子元素上下居上</div>
+        <div class="item"></div>
+    </div>
+    <div class="cont cont16">
+        <div class="item">align-items</div>
+        <div class="item">所有子元素上下居下</div>
+        <div class="item">注意：父元素设置了外边距 </div>
+    </div>
+    <div class="cont">
+        <a href="javascript:;"><h3>结束了</h3></a>
+    </div>
+
+
+
+</div>
+</body>
+</html>
