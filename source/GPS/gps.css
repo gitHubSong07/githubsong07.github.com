@@ -1,0 +1,28 @@
+ .gps >ul>li{
+     background-color: #2e6da4;
+     display: inline-block;
+     padding-top: 5px ;
+     padding-bottom: 5px ;
+     color: #fff;
+     width: 20%;
+     float: left;
+     text-align: center;
+  }
+ ol>li{
+text-align: left
+ }
+ .gps ul a{
+     color: #f9f9f9;
+ }
+ body，,li,a,ul,ol,td,th{
+     font-size: 18px ;
+     font-family: "微软雅黑"；
+
+ }
+ .table-list ol{
+     display: none;
+     list-style: none;
+ }
+ .active{
+     display: block;
+ }
