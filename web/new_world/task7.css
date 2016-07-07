@@ -1,0 +1,267 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+}
+.max-contailer{
+    width: 1280px;
+    height: 4000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff
+
+}
+.ivan-span{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.navi{
+    height: 57px;
+
+
+}
+.left-logo{
+    margin-left: 20px;
+    display: block;
+}
+
+.newWorld{
+    margin-left: 60px;
+    font-size: 20px;
+   font-weight: bold;
+    color: #393a3a;
+    display: block;
+  margin-top: -40px;
+}
+.right-navi{
+    float: right;
+    display: block;
+    margin-top: -30px;
+}
+
+a{
+    text-decoration: none;
+}
+a:link{
+}
+a:hover{
+    color:red;
+    border-bottom:  4px solid red;
+}
+.navi-span{
+    color: #bec0c3;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+
+}
+
+.login-img{
+    display: block;
+}
+.imgView{
+    height: 675px;
+    position: relative;
+}
+.start{
+    background-color:#e74f4d;
+    border: none;
+
+width: 332px;
+    height: 65px;
+    font-size: 24px;
+    font-family: "微软雅黑";
+    color: white;
+}
+.imgView-under{
+    width: 680px;
+    height: 400px;
+    position: absolute;
+    left: 110px;
+   top: 170px;
+
+
+
+}
+.alphq-step{
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+.box{
+    width: 315px;
+    text-align: center;
+    height: 250px;
+    display: inline-block;
+}
+
+.box-img{
+
+}
+.box-p{
+    margin-bottom: 68px;
+    padding-left: 92px;
+    padding-right: 92px;
+    padding-bottom: 20px;
+    border-right: 3px solid #cccccc;
+    font-size: 16px;
+}
+#box-4{
+    border: none;
+}
+.about-world{
+    height: 360px;
+    text-align: center;
+    background-color: #ededed;
+}
+.about-h1{
+    color: #a1a1a1;
+    font-size: 44px;
+    font-weight: normal;
+}
+.search-view{
+    height: 340px;
+    background-color: #11456b;
+    background-image: url("img/task7_1_search-back.jpg");
+    text-align: center;
+    background-color: #33ff33;
+    padding: 0px;
+
+}
+.search-span1{
+    color: white;
+    font-size: 22px;
+    display: block;
+    padding-top: 50px;
+    margin: 0px;
+ 
+}
+.search-span2{
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding-top: 0px;
+}
+.search-hr{
+    width: 30px;
+}
+.select-option{
+    margin-top: 50px;
+}
+.select-place{
+    width: 235px;
+    height: 36px;
+    color:  #a1a1a1;
+    border: 1px solid #be4e48;
+    display: inline-block;
+
+
+}
+.option-select{
+    height: 36px;
+    color: #a1a1a1;
+    background-color:#e3e2e4;
+    font-size: 16px;
+
+}
+.search-place{
+    color: white;
+    background-color: #be4e48;
+    border: 1px solid #be4e48;
+    width: 235px;
+    height: 36px;
+}
+.img-view{
+    height: 606px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+.view-contailer{
+    margin-top: 70px;
+    width: 220px;
+    height: 400px;
+    background-color: #f7f7f7;
+    display: inline-block;
+}
+.image-view{
+    padding: 15px 9px 15px 9px;
+     border: 1px solid #dadada;
+    margin: 0px;
+    background-color: #ffffff;
+}
+.-img-view{
+    width: 200px;
+    height: 312px;
+    display: inline-block;
+}
+.img-width{
+    margin-left: 38px;
+}
+.scroll-view{
+    height: 570px;
+
+}
+.left-scrollview{
+    width: 66%;
+    height: 570px;
+    display: inline-block;
+    background-color: #a1a1a1;
+}
+.right-scrollview{
+    margin: 0px;
+    width: 33%;
+    float: right;
+   vertical-align: top;
+    text-align: center;
+    height: 570px;
+
+
+
+}
+.page-img{
+    margin-left: 20px;
+    background-color: #a1a1a1;
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    border-radius: 20px;
+    font-size: 22px;
+}
+.chakan-detail{
+    display: inline-block;
+    width: 33% ;
+    height: 570px;
+
+    float: left;
+    text-align: center;
+}
+.detail-imge{
+    display: inline-block;
+    height: 570px;
+    float: left;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 34%;
+    background-color: #f5e327;
+}
+.add-me{
+    height: 750px;
+
+}
+tr{
+    background-color: #ededee;
+
+}
+td{
+    width: 300px;
+    height: 40px;
+   margin: 5px;
+}
+.text-ch{
+ border:  none;
+    height:30px;
+    background-color: #ededee;
+    width: 220px;
+}

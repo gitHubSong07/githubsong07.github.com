@@ -1,0 +1,424 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+     min-width: 950px;
+    text-align: center;
+    font: 12px Helvetica,Arial,sans-serif;
+}
+li{
+    list-style-type: none;
+}
+.navi{
+
+    height: 89px;
+    width: 950px;
+     display: inline-block;
+    background: url("img/douban-logo.png") no-repeat  0px 30px;
+}
+a{
+    color: #3377aa;
+    text-decoration: none;
+}
+a:hover{
+    background: #3377aa;
+    color: #ffffff;
+}
+.na-search{
+    margin-top: 30px;
+    display: inline-block;
+    width: 272px;
+    height: 30px;
+    margin-left: 180px;
+   
+}
+.hd-search{
+    width: 272px;
+    height: 30px;
+    border: 1px solid #bfbfbf;
+    font: 16px;
+    background: url("img/douban-search.png") no-repeat 250px 10px;
+}
+.navigation{
+ 
+    height: 30px;
+    margin-top: 30px;
+    display: inline-block;
+    width: 460px;
+    float: right;
+
+}
+.navi-span{
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 8px;
+}
+.na-navi{
+
+    }
+.scroll-contailer{
+    height: 178px;
+    background-color: #eef4ed;
+}
+ .scroll{
+     display: inline-block;
+    height: 178px;
+     width: 950px;
+
+    background: url("img/douban-scroll.png") no-repeat    ;
+
+
+}
+.download{
+    height: 178px;
+    width: 280px;
+    margin-left: 396px;
+
+    text-align: left;
+    float: left;
+    display: inline-block;
+}
+.login-scroll{
+    height: 178px;
+    width: 272px;
+
+    display: inline-block;
+    float: left;
+}
+.login-admin{
+    height: 30px;
+    width: 270px;
+
+}
+.login-username{
+    margin-top: 30px;
+}
+.login-password{
+    margin-top: 5px;
+}
+.login-btn{
+    width: 134px;
+    height: 30px;
+    border: 1px solid #dbe5db;
+    margin-top: 6px;
+}
+.zhuce-btn{
+    background-color: #eef4ed;
+    color: #30a080;
+}
+.denglu-btn{
+    background-color: #30a080;
+    color: #ffffff;
+}
+.remind-me{
+    display: inline-block;
+    color: #666666;
+    vertical-align: middle;
+    float: left;
+    margin-top: 12px;
+}
+.img-scroll{
+    width: 950px;
+    height: 90px;
+    background: url("img/douban-img-scroll.jpg");
+    display: inline-block;
+    margin-top: 35px;
+}
+.redian{
+    width: 950px;
+    height: 520px;
+    display: inline-block;
+
+}
+.redian-img{
+    display: inline-block;
+    width: 350px;
+    height: 450px;
+
+  float: left;
+    margin-top: 40px;
+    margin-left: -96px;
+}
+.redian-news{
+    float: left;
+    width: 275px;
+    height: 380px;
+
+    margin-top: 40px;
+    margin-left: 30px;
+    text-align: left;
+}
+.redian-kaixin{
+    float: left;
+    display: inline-block;
+    width: 265px;
+    height: 300px;
+    margin-left: 24px;
+    margin-top: 16px;
+
+    text-align: left;
+
+}
+.img-tupian{
+    width: 173px;
+    height: 210px;
+
+    display: block;
+    float: left;
+    text-align: left;
+
+}
+.redian-span{
+    display: inline-block;
+    color: #999999;
+}
+.new-black-span{
+    color: #666666;
+    margin-top: 8px;
+}
+.new-litte-span{
+    color: #999999;
+    margin-top: 5px;
+}
+.redian-a{
+    display: block;
+    margin-top: 8px;
+}
+.movie-col{
+    height: 760px;
+    background-color: #f7f7f7;
+}
+.movie-contailer{
+    width: 950px;
+
+    display: inline-block;
+}
+.movie-li{
+    padding-top: 40px;
+    width: 127px;
+    height: 627px;
+
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+.movie-reying{
+    height: 627px;
+    width: 525px;
+
+    display: inline-block;
+    float: left;
+    margin-top: 44px;
+    text-align: left;
+}
+.movie-fenglei{
+    height: 627px;
+    width: 266px;
+
+    display: inline-block;
+    float: right;
+    padding-top: 40px;
+    text-align: left;
+}
+.movie-A{
+    font-size: 26px;
+}
+.movie-a{
+    font-size: 14px;
+ }
+.movie-li li{
+    margin-top: 10px;
+}
+.xiao-title{
+    display: inline-block;
+    float:left;
+    color: #007722;
+    font-size: 16px;
+}
+.movie-img{
+    display: inline-block;
+    float: left;
+
+    text-align: center;
+
+    width: 130px;
+    height: 254px;
+}
+.xp-movie{
+    height: 23px;
+    width: 70px;
+    background: #2189bf;
+    color: #ffffff;
+    border-radius: 2px;
+    border: none;
+
+}
+.movie-fenglei .row{
+    display: inline-block;
+    width: 50px;
+    height: 14px;
+    margin-top: 10px;
+}
+.movie-fenglei hr{
+    border-top:1px solid #eaeaea;
+
+
+}
+.movie-fenglei .movie-a{
+    font-size: 12px;
+}
+.xiaozu{
+    height: 635px;
+    }
+.xiaozu-contailer{
+    height: 635px;
+    width: 950px;
+    display: inline-block;
+
+}
+.xiaozu-col1{
+     width: 115px;
+    height: 630px;
+
+}
+.xiaozu-col2{
+       width: 566px;
+    height: 630px;
+
+}
+
+.xiaozu-col3{
+    padding-top: 40px;
+    width: 264px;
+    height: 630px;
+    display: inline-block;
+    float: right;
+
+
+}
+.xiaozu-col{
+    padding-top: 40px;
+    text-align: left;
+    display: inline-block;
+    float: left;
+
+}
+.xiaozu a{
+    color: #017a85;
+    text-decoration: none;
+}
+.xiaozu a:hover{
+    background: #2189bf;
+    color: #ffffff;
+}
+.xiaozu-col li{
+    margin-top: 10px;
+}
+.col-item{
+    display: inline-block;
+    float: left;
+    width: 280px;
+    height: 89px;
+
+}
+.col-item .item-a{
+    display:inline-block;
+    margin-left: 15px;
+    vertical-align: top;
+
+}
+.col-item p{
+    color: #999999;
+}
+.col-item .item-il{
+    display: inline-block;
+    float: right;
+    width: 210px;
+}
+.xiaozu .row-span{
+    display: inline-block;
+    width: 40px;
+    height: 14px;
+    margin-top: 10px;
+}
+.xiaozu .item-row-a{
+    display: inline-block;
+    width: 50px;
+    height: 18px;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666666;
+}
+.book-col{
+    height: 655px;
+    background-color: #f7f7f7;
+   }
+.book-contailer{
+    height: 655px;
+    width: 950px;
+    display: inline-block;
+
+}
+.book-item1{
+    width: 124px;
+    height: 615px;
+    padding-top: 37px;
+    text-align: left;
+}
+.book-item2{
+    width: 564px;
+    height: 615px;
+    padding-top: 42px;
+    text-align: left;
+
+}
+.book-item3{
+    width: 250px;
+    height: 615px;
+    padding-top: 40px;
+    text-align: left;
+}
+.book-common{
+
+
+    display: inline-block;
+    float: left;
+}
+.book-col a{
+    color: #4a2f14;
+
+}
+.book-item1 li{
+    margin-top: 13px;
+}
+.new-book{
+    width: 133px;
+    height: 255px;
+
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+.quanxian{
+    width: 70px;
+    height: 23px;
+    background-color: #999a95;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+}
+.book-item3 .row-span{
+ display: inline-block;
+    margin-left: 10px;
+  }
+
+.music-col1{
+
+}
+.music-col2{
+
+}
+.music-col3{
+
+}
