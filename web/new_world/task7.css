@@ -8,7 +8,7 @@ body{
     height: 4000px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ffffff
+    background-color: #ffffff;
 
 }
 .ivan-span{
@@ -24,7 +24,10 @@ body{
     margin-left: 20px;
     display: block;
 }
-
+a{
+    color: #393a3a;
+    padding-bottom: 10px ;
+}
 .newWorld{
     margin-left: 60px;
     font-size: 20px;
