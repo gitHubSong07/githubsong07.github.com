@@ -3,6 +3,7 @@
 <head>
     <title>前端进阶</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
 
     <!--<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">-->
@@ -13,75 +14,115 @@
     <script src="source/jquery-1.9.1.min.js"></script>
     <script src="source/bootstrap.js"></script>
     <script src="source/bootstrap.min.css"></script>
+    <style>
+        header {
+            background-color: #00b38c;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            min-width: 200px ;
+        }
+        table{
+            width: 100%;
+        }
+        table tr{
 
+         }
+        @media (max-width: 500px ){
+            table td{
+                width: 25%;
+             }
+        }
+        @media (min-width: 500px ){
+            table td{
+                width: 25%;
+
+            }
+        }
+        table td{
+            height: 33px;
+            font-size: 18px ;
+            border-collapse: collapse;
+        }
+    </style>
 
 </head>
 <body>
-<!--//头部导航-->
-<nav class="navbar navbar-inverse" role="navigation" style="margin: 0;" >
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">小学森</a>
-    </div>
-    <div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="web/h5/h5_index.html">h5</a></li>
-            <li><a href="#">网址导航</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Java <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="web/flexBox/flexBox.html">flex布局</a></li>
-                    <li><a href="source/toolbar/toolbar.html">toolbar</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">分离的链接</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">另一个分离的链接</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
+    <div class="container">
+        <header><h1>myself学习</h1></header>
+        <div class="content">
+            <div class="section1">
+                <h3>section1</h3>
+                <table class="table-bordered table-responsive" >
+                    <thead></thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="web/h5/h5_index.html">响应式布局</a></td>
+                        <td><a href="web/mi_note/index.html">小米Note</a></td>
+                        <td><a href="web/new_world/task7.html">新世界</a></td>
+                        <td><a href="web/douban/index.html">豆瓣网静态</a></td>
+                    </tr>
+                    <tr>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                    </tr>
+                    <tr>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                    </tr>
+                    <tr>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                    </tr>
 
-<div class="container-fluid" style="border : 1px solid #000000;padding: 0" >
-    <div class="row-fluid" style="background-color: #1b6d85;margin: 0;">
-        <div class="span12">
-            <div class="carousel slide" id="carousel-808444">
-                <ol class="carousel-indicators">
-                    <li class="active" data-slide-to="0" data-target="#carousel-808444">
-                    </li>
-                    <li data-slide-to="1" data-target="#carousel-808444">
-                    </li>
-                    <li data-slide-to="2" data-target="#carousel-808444">
-                    </li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img alt="" src="img/banner01.jpg" />
-                        <div class="carousel-caption">
+                    </tbody>
+                </table>
+            </div>
+            <div class="section1">
+                <h3>练习Demo</h3>
+                <table>
+                    <thead></thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="web/cssGuide/navigation.html">CSS权威指南</a></td>
+                        <td><a href="web/flexBox/flexBox.html">flex-box布局</a></td>
+                        <td><a href="web/bootstrap/modelAlert.html">bootstrap模态弹出框</a></td>
+                        <td><a href="web/bootstrap/警告框/warning.html">bootstrap警告弹出框</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="web/bootstrap/选项卡/table.html">bootstrap选项卡</a></td>
+                        <td><a href="web/bootstrap/滚动监视器/scrollListen.html">bootstrap滚动监视器</a></td>
+                        <td><a href="web/bootstrap/下拉menu/menu.html">bootstrap下拉菜单</a></td>
+                        <td><a href="web/bootstrap/图片轮播/scrollView.html">bootstrap图片轮播</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="web/bootstrap/手风琴/sfq.html">手风琴</a></td>
+                        <td><a href="web/bootstrap/按钮插件/loading.html">bootstrap按钮插件</a></td>
+                        <td><a href="web/bootstrap/按钮插件/单选.html">bootstrap按钮单选</a></td>
+                        <td><a href="web/bootstrap/提示狂/alert1.html">bootstrap提示框1</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="web/bootstrap/提示狂/prompt.html">bootstrap提示框2</a></td>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                        <td>导航列表</td>
+                    </tr>
 
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img alt="" src="img/banner02.jpg" />
-                        <div class="carousel-caption">
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img alt="" src="img/banner03.jpg" />
-                        <div class="carousel-caption">
-
-                        </div>
-                    </div>
-                </div> <a data-slide="prev" href="#carousel-808444" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-808444" class="right carousel-control">›</a>
+                    </tbody>
+                </table>
             </div>
         </div>
+
     </div>
-
-
-</div>
 
 
 <script>
