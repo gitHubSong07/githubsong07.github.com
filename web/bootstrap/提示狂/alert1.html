@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>弹出框的结构</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+        body{
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+<button type="button"
+        class="btn btn-default"
+        data-container="body"
+        data-placement="bottom"
+        data-toggle="popover"
+        data-original-title="Bootstrap弹出框标题"
+        data-content="Bootstrap弹出框的内容" >
+    猛击我吧
+</button>
+<a href="#" class="btn btn-default"
+   data-container="body"
+   data-placement="right"
+   data-toggle="popover"
+   title="Bootstrap弹出框标题"
+   data-content="Bootstrap弹出框的内容">
+    猛击我吧
+</a>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+
+</body>
+</html>
