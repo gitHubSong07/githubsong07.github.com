@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="CSS3 CSS HTML 纯CSS 哆啦A梦" />
+    <meta name="description" content="CSS作图 CSS3作图 存CSS作图 CSS做哆啦A梦" />
+    <title>多拉A梦</title>
+
+    <style>
+        body{
+            min-width: 325px ;
+        }
+        .head{
+            width: 314px;
+            height: 314px;
+            border: 1px solid #333;
+            -webkit-border-radius:157px ;
+            -moz-border-radius:157px ;
+            border-radius: 157px ;
+            margin: 0 auto;
+            background-color: #30c8ed;
+            text-align: center;
+            z-index: 998;
+            position: relative;
+
+        }
+        .head-lian{
+            height: 180px;
+            width: 266px;
+            border-radius: 90px;
+            border: 1px solid #333333;
+            margin: 0 auto;
+            margin-top: 80px  ;
+            background-color: #fff;
+
+        }
+        .lian-say{
+            height: 88px;
+            width: 72px;
+            border: 2px solid;
+            border-radius: 30px;
+            float: left;
+            margin-top: -45px ;
+            background-color: #fff;
+        }
+        .lian-say:first-child{
+            margin-left: 58px;
+        }
+        .yanzhu{
+            width: 16px;
+            height: 16px;
+            border-radius: 8px ;
+            background-color: #333333;
+            margin-top:55px ;
+        }
+        .yanzhu1{
+            float: right;
+            margin-right : 13px;
+        }
+        .yanzhu2{
+            float: left;
+            margin-left: 13px;
+        }
+        .bizi{
+            width: 35px;
+            height: 35px;
+            border-radius: 17px ;
+            border: 2px solid;
+            background-color: #c93e00;
+            margin: 0 auto ;
+            margin-top: 36px;
+        }
+        .linearea{
+            height: 60px;
+            width: 60px;
+            margin-top: -30px;
+            float: left;
+            margin-left: 27px;
+        }
+        .linearea2{
+            float: right;
+            margin-right: 27px;
+        }
+        .line{
+            height: 2px;
+            background-color: #333333;
+            margin-bottom: 20px ;
+        }
+        .left-line1{
+            transform: rotate(20deg);
+            border-width: 3px;
+        }
+        .left-line3{
+            transform: rotate(-20deg);
+            border-width: 3px;
+        }
+        .right-line1{
+            transform: rotate(-20deg);
+            border-width: 3px;
+        }
+        .right-line3{
+            transform: rotate(20deg);
+            border-width: 3px;
+        }
+        .vbizi{
+            width: 3px;
+            height: 75px;
+            background-color: #333;
+            margin: 0 auto;
+        }
+        .mouse{
+            width: 200px;
+            height: 200px;
+            border-bottom : 2px solid;
+            margin: 0 auto ;
+           border-radius: 100px  ;
+
+            margin-top: -200px;
+        }
+        .mouse-hide{
+
+        }
+        .jing{
+            height: 22px;
+            width: 232px;
+            border: 3px solid;
+            background-color: #a72400 ;
+            border-radius: 11px;
+            margin: 0 auto;
+            margin-top: -60px ;
+            z-index: 2000;
+            position:  relative;
+        }
+        .duzi{
+            width: 220px;
+            height: 160px;
+            border: 2px solid;
+            background-color: #05adde;
+            margin: 0 auto;
+            margin-top: -2px ;
+            z-index: 1100;
+            position: relative;
+
+        }
+        .dzyuan{
+            width: 170px;
+            height: 170px;
+            border-radius: 85px;
+            border: 2px solid;
+            margin: 0 auto ;
+            background-color: #fff ;
+            margin-top: -40px;
+
+         }
+        .areaWhite{
+
+            margin: 0 auto ;
+            margin-top:-2px ;
+            position: relative;
+            z-index: 1100;
+            width: 150px;
+            height: 20px;
+            background-color: #fff ;
+        }
+        .yuandian{
+            height: 40px;
+            width: 40px;
+            margin: 0 auto;
+            background-color: #d1c911;
+            border-radius: 21px;
+            border: 2px solid;
+             margin-top: 5px ;
+            position: relative;
+            z-index:2002;
+         }
+        .jing-jx{
+            height: 2px ;
+            width: 36px ;
+            border: 2px solid ;
+            margin-top: 14px;
+        }
+        .jz-yuan{
+            height: 10px;
+            width: 12px;
+            border-radius: 5px;
+            background-color: #000;
+
+            margin: 0 auto;
+        }
+        .jz-line{
+            height: 10px;
+            width: 3px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+        .banyuan{
+            width: 130px;
+            height: 130px;
+            border-radius: 65px;
+            border : 2px solid;
+            margin: 0 auto;
+        }
+        .banyuan-line{
+            margin-left: -2px ;
+            width: 134px;
+            height: 67px;
+            background-color: #fff;
+            border-bottom: 2px solid;
+        }
+        .kua{
+            margin: 0 auto;
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+            border: 2px solid;
+            margin-top: -11px ;
+            position: relative;
+            z-index: 2002;
+            background-color: #fff;
+        }
+        .kua-hide{
+            width: 24px ;
+            margin-left: -2px ;
+            background-color: #fff;
+            margin-top: 10px ;
+            height: 12px;
+        }
+        .footer{
+            margin: 0 auto;
+            width: 268px;
+            position: relative;
+
+        }
+        .foot{
+          position: absolute;
+            float: left;
+            margin: 0 auto;
+            width: 127px;
+            height: 30px;
+            border-radius: 16px;
+            border: 2px solid;
+            margin-top: -15px ;
+            position: relative;
+            z-index: 2002;
+            background-color: #fff;
+        }
+        .foot-right{
+            margin-left: 5px ;
+        }
+        .hand{
+            width: 60px;
+            height: 30px;
+            background-color: #05adde;
+            border: 2px solid;
+            margin: 0 auto;
+            position: absolute;
+            top: 20px ;
+            z-index: 10;
+
+        }
+        .handleft{
+            left: -50px;
+            transform: rotate(-30deg);
+        }
+        .handright{
+            transform: rotate(30deg);
+            right: -50px ;
+        }
+        .left-hand{
+            left: 0;
+
+        }
+        .right-hand{
+            right: 0;
+
+        }
+        .left-hand,.right-hand{
+            border: none;
+            height: 50px;
+            width: 20px;
+            top: 0px;
+        }
+
+
+        .hand-yuan{
+            width: 34px;
+            height: 34px;
+            border-radius: 19px ;
+            border: 2px solid;
+            background-color: #fff;
+            margin-left: -20px ;
+            margin-top:-5px ;
+        }
+        .hand-yuan-right{
+            float: right;
+            margin-right: -20px ;
+            margin-top: -4px ;
+        }
+    </style>
+</head>
+<body>
+<h1 style="margin: 0;">纯css</h1>
+<div class="head">
+    <div class="head-lian">
+        <!--眼睛-->
+        <div class="lian-say">
+            <div class="yanzhu yanzhu1"></div>
+        </div>
+        <div class="lian-say">
+            <div class="yanzhu yanzhu2"></div>
+        </div>
+
+        <!--鼻子-->
+        <div class="bizi"></div>
+
+        <div class="linearea">
+            <div class="line left-line1"></div>
+            <div class="line"></div>
+            <div class="line left-line3"></div>
+
+        </div>
+        <div class="linearea linearea2">
+            <div class="line right-line1"></div>
+            <div class="line"></div>
+            <div class="line right-line3 "></div>
+        </div>
+
+        <div class="vbizi"></div>
+
+        <!--//嘴巴-->
+        <div class="mouse">
+            <div class="mouse-hide">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--颈子-->
+<div class="jing">
+    <div class="yuandian">
+        <div class="jing-jx"></div>
+        <div class="jz-yuan"></div>
+        <div class="jz-line"></div>
+    </div>
+</div>
+<!--肚子-->
+<div class="duzi">
+    <div class="dzyuan">
+        <div class="areaWhite"></div>
+
+        <div class="banyuan">
+
+            <div class="banyuan-line"></div>
+        </div>
+    </div>
+    <!--手-->
+    <div class="hand handleft">
+        <div class="hand-yuan"></div>
+    </div>
+    <div class="hand handright">
+        <div class="hand-yuan hand-yuan-right"></div>
+    </div>
+    <div class="hand left-hand"></div>
+    <div class="hand right-hand"></div>
+</div>
+<!--//跨-->
+    <div class="kua">
+        <div class="kua-hide"></div>
+    </div>
+<!--//脚-->
+<div class="footer">
+    <div class="foot"></div>
+    <div class="foot foot-right"></div>
+</div>
+
+
+
+</body>
+</html>
