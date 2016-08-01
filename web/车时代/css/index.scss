@@ -1,0 +1,357 @@
+$screen-sm-min: 768px ;
+$screen-md-min: 992px ;
+$screen-lg-min: 1200px ;
+$baseColor : #fed136;
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+/* 超小设备（手机，小于 768px） */
+@media (max-width:$screen-sm-min) {
+  .navbar-brand{
+    font-size: 18px ;
+    color : $baseColor
+  }
+  .text{
+    padding-top: 100px ;
+    padding-bottom: 50px ;
+  }
+  .img-model{
+    max-width: 400px ;
+    max-height: 290px ;
+  }
+
+}
+/* 小型设备（平板电脑，768px 起） */
+@media (min-width:$screen-sm-min) {
+body{
+
+}
+
+  .navbar-brand{
+    font-size: 2em ;
+  }
+  #bs-example-navbar-collapse-1 {
+    .nav-a{
+      color : #fff;
+      &:hover{
+        color: $baseColor;
+      }
+    }
+  }
+  .navbar-inverse{
+
+  }
+
+  .text{
+    padding-top: 300px ;
+    padding-bottom: 200px ;
+  }
+  .img-model{
+    height: 250px;
+    width: 345px;
+
+  }
+
+}
+@media (max-width: $screen-md-min) {
+  .vertical-line{
+    padding-bottom: 150px ;
+    .line1{
+      position: absolute;
+      z-index: 8;
+      width: 2px;
+      background-color: #747474;
+      left: 55px;
+      top: 0;
+      height: 600px ;
+
+    }
+    .about-img{
+      margin-top: 80px ;
+    }
+    img{
+      position: relative;
+      z-index: 10 ;
+      float: left;
+      height: 80px;
+      display: block;
+    }
+    .cont,.cont1{
+      h3{
+        font-weight: 700;
+        text-align: left;
+        margin: 10px ;
+        margin-left: 40px ;
+        padding-left: 57px ;
+      }
+      p{
+        padding-left: 100px ;
+        color : #747474;
+      }
+    }
+
+
+  }
+}
+
+/* 中型设备（台式电脑，992px 起） */
+@media (min-width: $screen-md-min) {
+  .img-model{
+    height: 212px;
+    width: 293px;
+  }
+  .vertical-line {
+    margin: 0 auto;
+  }
+  .vertical-line{
+
+    p{
+      color: #747474;
+    }
+    width: 2px;
+    height: auto;
+    background: #ccc;
+    .about-img{
+      position: relative;
+      width: 510px;
+      margin-top: 150px ;
+      .cont{
+        position: absolute;
+        margin-left: -470px ;
+        top :0 ;
+        float: left;
+        text-align: right;
+        width: 350px;
+      }
+      .cont h3,.cont1 h3{
+        font-weight: 700 ;
+        text-align: right;
+
+      }
+      .cont1 h3{
+        text-align: left;
+      }
+      .cont1{
+        position: absolute;
+        margin-left: 125px ;
+
+        top :0 ;
+        float: left;
+        text-align: left;
+        width: 350px;
+      }
+      img{
+        border-radius: 200px ;
+        margin-left: -85px ;
+        display: inline;
+        border : 5px solid #EFEFEF;
+        //-moz-outline-radius: 200px ;
+        //outline: 5px solid #EFEFEF;
+        //　box-shadow: 0 0 0 5px #EFEFEF;
+      }
+
+    }
+  }
+
+}
+/* 大型设备（大台式电脑，1200px 起） */
+@media (min-width: $screen-lg-min) {
+ .img-model{
+   height: 260px;
+   width: 360px;
+ }
+
+}
+
+ .header{
+   //background-image: url("../img/banner03.jpg") ;
+   //background-repeat: no-repeat;
+ 
+//   background-size: 100%;
+ }
+.text{
+
+  .intro-lead-in{
+    font-size: 40px;
+    line-height: 40px ;
+  }
+  text-align: center;
+  .intro-heading{
+    font-size: 75px ;
+    line-height: 75px ;
+    margin-top: 50px ;
+    margin-bottom: 50px ;
+  }
+  a{
+    padding: 20px 40px ;
+    background-color: $baseColor;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px ;
+    line-height:  1.42857143em ;
+    border-color: #fed136;
+    font-weight: 700 ;
+  }
+
+}
+.navbar-brand{
+  color: $baseColor;
+}
+#bs-example-navbar-collapse-1{
+  background-color: #000;
+  a{
+    color: #fff;
+    &:hover{
+    color: $baseColor;
+  }
+  }
+
+}
+.header{
+      .container{
+        padding: 0;
+      }
+     background-image: url("../img/bg_heade.jpg") ;
+  background-position: center;
+  color : #fff ;
+}
+.row-service{
+  padding-bottom: 80px ;
+}
+.section2, .section-introduction,.section-about-me,.section-call-me{
+  padding-top :150px ;
+  h1,h3{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+  }
+  h1{
+      font-size : 40px ;
+      margin-bottom: 15px ;
+      font-weight: 700 ;
+  }
+  h3{
+    font-size: 16px ;
+
+  }
+
+}
+.section2-item{
+  .item{
+    text-align: center;
+    img{
+      display: block;
+      margin: 20px  auto;
+
+    }
+    h3{
+      text-align: center;
+      margin: 15px 0;
+      font-weight: 700 ;
+    }
+    p{
+      text-align: center;
+      line-height: 1.75em;
+      font-size: 14px ;
+    }
+  }
+}
+.add-model{
+  width: 100%;
+  height: 100%;
+  background-color: $baseColor;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  h2{
+     color: #fff;
+    text-align: center;
+    line-height: 100%;
+    height: 100%;
+    margin-top: 100px ;
+  }
+}
+.section-introduction
+{
+
+  .img-model{
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    &:hover{
+      .add-model{
+        display: block;
+      }
+
+    }
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .col-lg-4{
+
+    padding: 0 20px ;
+    background-color: #fff;
+  }
+  h3{
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding-bottom: 25px ;
+  }
+    .title {
+      padding-bottom: 0;
+      font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700 ;
+  }
+
+}
+
+.section-call-me{
+
+
+  padding-bottom: 150px ;
+  h3,h1{
+    color: #fff;
+  }
+  .text-bz,.text-lg{
+    padding: 15px;
+  }
+  .text-bz input[type='text']{
+    height: 50px;
+    border : none;
+    border-radius: 8px ;
+    padding: 20px;
+    width: 100%;
+  }
+  .text-bz textarea{
+    height: 210px;
+    width: 100%;
+    border : 1px solid $baseColor;
+    border-radius: 8px ;
+  }
+  .btn-lg{
+    padding: 20px;
+    background-color: $baseColor;
+    display: block;
+    margin: 20px  auto;
+  }
+}
+.footer{
+  padding: 15px ;
+   height: 65px ;
+  background-color: #fff;
+  padding-left: 30px ;
+  span{
+    text-align: center;
+    display: inline-block;
+  }
+}
+.fluid-send-message{
+  background-image: url("../img/bg_send.jpg");
+  background-position: center;
+}

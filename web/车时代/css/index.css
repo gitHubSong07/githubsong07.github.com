@@ -1,0 +1,79 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; }
+
+/* 超小设备（手机，小于 768px） */
+@media (max-width: 768px) { .navbar-brand { font-size: 18px; color: #fed136; }
+  .text { padding-top: 100px; padding-bottom: 50px; }
+  .img-model { max-width: 400px; max-height: 290px; } }
+/* 小型设备（平板电脑，768px 起） */
+@media (min-width: 768px) { .navbar-brand { font-size: 2em; }
+  #bs-example-navbar-collapse-1 .nav-a { color: #fff; }
+  #bs-example-navbar-collapse-1 .nav-a:hover { color: #fed136; }
+  .text { padding-top: 300px; padding-bottom: 200px; }
+  .img-model { height: 250px; width: 345px; } }
+@media (max-width: 992px) { .vertical-line { padding-bottom: 150px; }
+  .vertical-line .line1 { position: absolute; z-index: 8; width: 2px; background-color: #747474; left: 55px; top: 0; height: 600px; }
+  .vertical-line .about-img { margin-top: 80px; }
+  .vertical-line img { position: relative; z-index: 10; float: left; height: 80px; display: block; }
+  .vertical-line .cont h3, .vertical-line .cont1 h3 { font-weight: 700; text-align: left; margin: 10px; margin-left: 40px; padding-left: 57px; }
+  .vertical-line .cont p, .vertical-line .cont1 p { padding-left: 100px; color: #747474; } }
+/* 中型设备（台式电脑，992px 起） */
+@media (min-width: 992px) { .img-model { height: 212px; width: 293px; }
+  .vertical-line { margin: 0 auto; }
+  .vertical-line { width: 2px; height: auto; background: #ccc; }
+  .vertical-line p { color: #747474; }
+  .vertical-line .about-img { position: relative; width: 510px; margin-top: 150px; }
+  .vertical-line .about-img .cont { position: absolute; margin-left: -470px; top: 0; float: left; text-align: right; width: 350px; }
+  .vertical-line .about-img .cont h3, .vertical-line .about-img .cont1 h3 { font-weight: 700; text-align: right; }
+  .vertical-line .about-img .cont1 h3 { text-align: left; }
+  .vertical-line .about-img .cont1 { position: absolute; margin-left: 125px; top: 0; float: left; text-align: left; width: 350px; }
+  .vertical-line .about-img img { border-radius: 200px; margin-left: -85px; display: inline; border: 5px solid #EFEFEF; } }
+/* 大型设备（大台式电脑，1200px 起） */
+@media (min-width: 1200px) { .img-model { height: 260px; width: 360px; } }
+.text { text-align: center; }
+.text .intro-lead-in { font-size: 40px; line-height: 40px; }
+.text .intro-heading { font-size: 75px; line-height: 75px; margin-top: 50px; margin-bottom: 50px; }
+.text a { padding: 20px 40px; background-color: #fed136; display: inline-block; text-align: center; font-size: 18px; line-height: 1.42857em; border-color: #fed136; font-weight: 700; }
+
+.navbar-brand { color: #fed136; }
+
+#bs-example-navbar-collapse-1 { background-color: #000; }
+#bs-example-navbar-collapse-1 a { color: #fff; }
+#bs-example-navbar-collapse-1 a:hover { color: #fed136; }
+
+.header { background-image: url("../img/bg_heade.jpg"); background-position: center; color: #fff; }
+.header .container { padding: 0; }
+
+.row-service { padding-bottom: 80px; }
+
+.section2, .section-introduction, .section-about-me, .section-call-me { padding-top: 150px; }
+.section2 h1, .section2 h3, .section-introduction h1, .section-introduction h3, .section-about-me h1, .section-about-me h3, .section-call-me h1, .section-call-me h3 { font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; text-align: center; }
+.section2 h1, .section-introduction h1, .section-about-me h1, .section-call-me h1 { font-size: 40px; margin-bottom: 15px; font-weight: 700; }
+.section2 h3, .section-introduction h3, .section-about-me h3, .section-call-me h3 { font-size: 16px; }
+
+.section2-item .item { text-align: center; }
+.section2-item .item img { display: block; margin: 20px  auto; }
+.section2-item .item h3 { text-align: center; margin: 15px 0; font-weight: 700; }
+.section2-item .item p { text-align: center; line-height: 1.75em; font-size: 14px; }
+
+.add-model { width: 100%; height: 100%; background-color: #fed136; position: absolute; left: 0; top: 0; display: none; }
+.add-model h2 { color: #fff; text-align: center; line-height: 100%; height: 100%; margin-top: 100px; }
+
+.section-introduction .img-model { position: relative; margin: 0 auto; cursor: pointer; }
+.section-introduction .img-model:hover .add-model { display: block; }
+.section-introduction img { width: 100%; height: 100%; }
+.section-introduction .col-lg-4 { padding: 0 20px; background-color: #fff; }
+.section-introduction h3 { font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif; padding-bottom: 25px; }
+.section-introduction .title { padding-bottom: 0; font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight: 700; }
+
+.section-call-me { padding-bottom: 150px; }
+.section-call-me h3, .section-call-me h1 { color: #fff; }
+.section-call-me .text-bz, .section-call-me .text-lg { padding: 15px; }
+.section-call-me .text-bz input[type='text'] { height: 50px; border: none; border-radius: 8px; padding: 20px; width: 100%; }
+.section-call-me .text-bz textarea { height: 210px; width: 100%; border: 1px solid #fed136; border-radius: 8px; }
+.section-call-me .btn-lg { padding: 20px; background-color: #fed136; display: block; margin: 20px  auto; }
+
+.footer { padding: 15px; height: 65px; background-color: #fff; padding-left: 30px; }
+.footer span { text-align: center; display: inline-block; }
+
+.fluid-send-message { background-image: url("../img/bg_send.jpg"); background-position: center; }
