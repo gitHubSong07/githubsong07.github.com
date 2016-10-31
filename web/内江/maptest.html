@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="main" style="height: 400px;"></div>
+
+<script src="lib/jquery-mini.js"></script>
+<script src="lib/echarts.js"></script>
+
+<script>
+var myChart = echarts.init(document.getElementById('main'));
+    myChart.showLoading();
+
+    $.get('lib/511000.json', function (geoJson) {
+
+        myChart.hideLoading();
+
+        echarts.registerMap('NJ', geoJson);
+
+        myChart.setOption(option = {
+            title: {
+                text: '内江市201610月降雨量',
+                subtext: '@2016 内江师范学院版权所有'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}<br/>{c} ml'
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    dataView: {readOnly: false},
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            visualMap: {
+                min: 0,
+                max: 100,
+                text:['高(/ml)','低'],
+                realtime: false,
+                calculable: true,
+                inRange: {
+                    color: ['#fff','blue']
+                }
+            },
+            series: [
+                {
+                    name: '内江市自然灾害预测',
+                    type: 'map',
+                    mapType: 'NJ', // 自定义扩展图表类型
+                    itemStyle:{
+                        normal:{label:{show:true}},
+                        emphasis:{label:{show:true}}
+                    },
+                    data:[
+                        {name: '东兴区', value: 44},
+                        {name: '市中区', value: 23 },
+                        {name: '隆昌县', value: 78},
+                        {name: '资中县', value: 12},
+                        {name: '威远县', value: 56},
+                      ],
+                    // 自定义名称映射
+                    nameMap: {
+                        'Central and Western': '中西区',
+                        'Eastern': '东区',
+                        'Islands': '离岛',
+                        'Kowloon City': '九龙城',
+                        'Kwai Tsing': '葵青',
+                        'Kwun Tong': '观塘',
+                        'North': '北区',
+                        'Sai Kung': '西贡',
+                        'Sha Tin': '沙田',
+                        'Sham Shui Po': '深水埗',
+                        'Southern': '南区',
+                        'Tai Po': '大埔',
+                        'Tsuen Wan': '荃湾',
+                        'Tuen Mun': '屯门',
+                        'Wan Chai': '湾仔',
+                        'Wong Tai Sin': '黄大仙',
+                        'Yau Tsim Mong': '油尖旺',
+                        'Yuen Long': '元朗'
+                    }
+                }
+            ]
+        });
+    });
+</script>
+</body>
+</html>

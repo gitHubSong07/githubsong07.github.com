@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>首页</title>
+    <meta name="keys" content="灾情预测、内江师范">
+    <meta name="description" content="灾情预测、内江师范">
+    <link rel="stylesheet" href="lib/icono.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            min-width: 325px;
+        }
+        body{
+            display: flex;
+            display: -webkit-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1c2a44;
+        }
+        .login-box{
+            width: 50%;
+            padding-top: 20px;
+            min-width: 300px;
+            min-height:300px;
+            background-color: #2e4056;
+            padding: 20px;
+        }
+        .main{
+           /* text-align: center;*/
+            display: block;
+            color: #e8f0f2;
+        }
+        .custom-input{
+            height: 23px;
+            padding-top:  5px;
+            padding-bottom:  5px;
+            font-size: 16px;
+            width: 100%;
+
+            border: none;
+            background-color: #2e4056;
+            outline: none;
+            color: #e8f0f2;
+            filter: alpha(opacity=0);
+            alpha: 0;
+        }
+        .hr{
+            background-color: #667481;
+            height: 2px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .btn-login{
+            background-color: #3cdaf5;
+            padding: 14px;
+            width: 100%;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        h1{
+            text-align: center;
+            color: #e8f0f2;
+            padding-bottom: 20px;
+        }
+        .font-red{
+            font-family: "微软雅黑";
+            color: #E34F1B;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="header">
+        <h1>xxx预测系统登录</h1></div>
+        <div class="main">
+            <form name="form_login" action="">
+            <div>
+                <label>账户:</label>
+                <input class="custom-input" name="user" type="text"  placeholder="Please enter user name">
+            </div>
+            <div class="hr"></div>
+
+            <div>
+                <label>密码:</label>
+                <input class="custom-input" name="pwd" type="password" value="" placeholder="Please enter password">
+            </div>
+
+            <div class="hr"></div>
+                <p class="font-red">密码输入错误</p>
+            <button class="btn-login">登 &nbsp;&nbsp;&nbsp; 录</button>
+            <br>
+            </form>
+        </div>
+    </div>
+    <script src="lib/jquery-mini.js"></script>
+    <script src="lib/layer/layer.js"></script>
+    <script>
+        $(function(){
+            $('.btn-login').on('click',function(){
+                var user = $('input[name="user"]').val();
+                var pwd = $('input[name="pwd"]').val().trim();
+                console.log(user+'='+pwd);
+                if(user==""||user==undefined||user==null){
+                    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+                    layer.open({
+                        title: '登录提示信息',
+                        content: '用户名为空'
+                    });
+                    return false;
+                }
+                if(pwd==""){
+                    layer.open({
+                        title: '登录提示信息',
+                        content: '密码为空'
+                    })
+                    return false;
+                }
+
+                layer.msg('正在登录...');
+                return true;
+            })
+        })
+    </script>
+</body>
+</html>

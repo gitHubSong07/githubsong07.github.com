@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>查询</title>
+    <meta name="keys" content="灾情预测、内江师范">
+    <meta name="description" content="灾情预测、内江师范">
+
+    <link rel="stylesheet" href="lib/icono.min.css">
+    <link rel="stylesheet" href="style/base.css">
+
+    <style>
+        .query-box{
+            width: 375px;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .input-query{
+            padding: 8px 14px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            border: 2px solid #00b17d;
+            width: 300px;
+            font-size: 16px ;
+        }
+        .input-query:focus{
+            box-shadow: 0 0 5px #00b17d;
+        }
+        .btn-query{
+            outline: none ;
+            padding: 9px 14px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #fff;
+            background: #00b17d;;
+            font-size: 16px;
+        }
+        .query-results{
+            padding-top: 20px;
+            background-color: #d9dde0;
+            margin-top: 20px;
+        }
+        .content{
+            background: #fff;
+        }
+        .query-result
+        {
+            padding: 20px;
+            height: 300px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .main{
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="menu-head">
+        <h1>项目名称</h1>
+        <h3 class="sub-title">版权所有：内江师范学院</h3>
+    </div>
+    <ul>
+        <li class="menu-list">
+            <span><span class="icono-home"></span>&nbsp;&nbsp;首 页</span>
+            <ul style="display: none">
+                <li><a href="index.html">首 页</a></li>
+
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-rightArrow"></span>&nbsp;&nbsp;导 入</span>
+            <ul style="display: none;">
+                <li><a href="import.html">导入文件</a></li>
+
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-search"></span>&nbsp;&nbsp;查 询</span>
+            <ul style="display: none;">
+                <li><a href="search.html">查询</a></li>
+                <li><a href="analyse.html">分析</a></li>
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-gear"></span>&nbsp;&nbsp;设 置</span>
+            <ul style="display: none;">
+                <li><a href="#">降雨量</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="login.html">退出</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="main">
+    <div class="header">
+        <h3>查 询</h3>
+    </div>
+    <div class="content">
+        <div class="query-box">
+            <form action="#">
+                <input class="input-query" type="search" placeholder="请输入查询关键字（如:内江市）">
+                <button class="btn-query"> 查询</button>
+            </form>
+        </div>
+        <div class="query-results">
+            <div class="query-result" id="query-result1"></div>
+        </div>
+        <div class="query-results">
+            <div class="query-result" id="query-result2"></div>
+        </div>
+        <div class="query-results">
+            <h3 style="text-align: center">内江市2016年各区月平均降水量</h3>
+            <div class="query-result" id="query-result3"></div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="lib/jquery-mini.js"></script>
+<script src="js/com_menu.js"></script>
+<script src="lib/echarts.js"></script>
+<script>
+    $(function(){
+        switchMenu();//menu切换
+        CustomBar('#query-result1',
+          '内江市2016年月平均降水量',
+           ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+           [22,33,45,100,200,270,300,250,150,34,20,10]
+        );
+        CustomBar('#query-result2',
+                '内江市2016年各区县年平均降水量',
+                ['市中区','东兴区','隆昌县','威远县','资中县'],
+                [120,110,131,100,141]
+        );
+        CustomBars();
+
+    })
+    //内江市降雨
+    /*
+     * id : #box
+     * title: 内江市2016年月平均降水量
+     * x坐标：['1月','2月','3月']
+     * value：[23,43,55]
+     * */
+    function CustomBar(ident, title, xdata, value){
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.querySelector(ident));
+        option = {
+            color: ['#3398DB'],
+            title: {
+                text: title,
+                subtext: '@2016 内江师范学院版权所有'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : xdata,
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'降水量',
+                    type:'bar',
+                    barWidth: '60%',
+                    data: value
+                }
+            ]
+        };
+        myChart.setOption(option);
+    }
+    function CustomBars(){
+        var myChart_bars = echarts.init(document.querySelector('#query-result3'));
+        myChart_bars.title = '堆叠柱状图';
+        option = {
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            legend: {
+                data:['市中区','东兴区','隆昌县','资中县','威远县']
+            },
+            grid: {
+                left: '0%',
+                right: '7%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'市中区',
+                    type:'bar',
+                    data:[43, 75, 87, 98, 330, 332, 301, 334, 190, 120, 67, 54 ]
+                },
+                {
+                    name:'东兴区',
+                    type:'bar',
+                    data:[52, 56, 67, 110, 90, 230, 210, 101, 134, 90, 145, 34]
+                },
+                {
+                    name:'隆昌县',
+                    type:'bar',
+                     data:[ 45, 56, 65, 127, 330, 310, 191, 234, 290, 98, 67,45]
+                },
+                {
+                    name:'资中县',
+                    type:'bar',
+                    data:[35, 54, 78, 154, 190, 330, 410, 201, 154, 190, 167, 65]
+                },
+                {
+                    name:'威远县',
+                    type:'bar',
+                    data:[ 67, 93, 132,154, 190, 330, 410,154, 190, 160, 120,76],
+                }
+            ]
+        };
+        myChart_bars.setOption(option);
+    }
+
+</script>
+</body>
+</html>

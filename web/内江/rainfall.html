@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>降雨量</title>
+    <meta name="keys" content="灾情预测、内江师范">
+    <meta name="description" content="灾情预测、内江师范">
+
+    <link rel="stylesheet" href="lib/icono.min.css">
+    <link rel="stylesheet" href="style/base.css">
+
+    <style>
+        #ident{
+            height: 400px;
+            width: 800px;
+            margin: 20px  auto;
+
+        }
+        .box-jy{
+            height: 400px;
+            width: 800px;
+            margin: 20px  auto;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="menu-head">
+        <h1>项目名称</h1>
+        <h3 class="sub-title">版权所有：内江师范学院</h3>
+    </div>
+    <ul>
+        <li class="menu-list">
+            <span><span class="icono-home"></span>&nbsp;&nbsp;首 页</span>
+            <ul style="display: none">
+                <li><a href="index.html">首 页</a></li>
+
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-rightArrow"></span>&nbsp;&nbsp;导 入</span>
+            <ul style="display: none;">
+                <li><a href="import.html">导入文件</a></li>
+
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-search"></span>&nbsp;&nbsp;查 询</span>
+            <ul style="display: none;">
+                <li><a href="search.html">查询</a></li>
+                <li><a href="analyse.html">分析</a></li>
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-gear"></span>&nbsp;&nbsp;设 置</span>
+            <ul style="display: none;">
+                <li><a href="#">降雨量</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="login.html">退出</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="main">
+    <div class="header">
+        <h3>降 雨 量</h3>
+    </div>
+
+    <div id="ident"></div>
+    <div class="clear: both"></div>
+    <div style="height: 20px;background: #eff3f4;"></div>
+    <div class="box-jy"></div>
+</div>
+
+<script src="lib/jquery-mini.js"></script>
+<script src="js/com_menu.js"></script>
+<script src="lib/echarts.js"></script>
+<script src="lib/require.js"></script>
+<script>
+    $(function(){
+        switchMenu();//menu切换
+        rainfall('ident');//降雨量
+        zzmap();
+    })
+    function rainfall(ident) {
+        var myChart = echarts.init(document.getElementById(ident));
+        myChart.showLoading();
+
+        $.get('lib/511000.json', function (geoJson) {
+
+            myChart.hideLoading();
+
+            echarts.registerMap('NJ', geoJson);
+
+            myChart.setOption(option = {
+                title: {
+                    text: '内江市2016年10月降雨量',
+                    subtext: '@2016 内江师范学院版权所有'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{b}<br/>{c} ml'
+                },
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                        dataView: {readOnly: false},
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                visualMap: {
+                    min: 0,
+                    max: 100,
+                    text: ['高(/ml)', '低'],
+                    realtime: false,
+                    calculable: true,
+                    inRange: {
+                        color: ['#fff', '#38A7F0']
+                    }
+                },
+                series: [
+                    {
+                        name: '内江市自然灾害预测',
+                        type: 'map',
+                        mapType: 'NJ', // 自定义扩展图表类型
+                        itemStyle: {
+                            normal: {label: {show: true}},
+                            emphasis: {label: {show: true}}
+                        },
+                        data: [
+                            {name: '东兴区', value: 44},
+                            {name: '市中区', value: 23},
+                            {name: '隆昌县', value: 78},
+                            {name: '资中县', value: 12},
+                            {name: '威远县', value: 56},
+                        ],
+                        // 自定义名称映射
+                        nameMap: {}
+                    }
+                ]
+            });
+        });
+    }
+    function zzmap(){
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.querySelector('.box-jy'));
+        myChart.title = '坐标轴刻度与标签对齐';
+        option = {
+            color: ['#3398DB'],
+            title: {
+                text: '内江市2016年月平均降雨量',
+                subtext: '@2016 内江师范学院版权所有'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'降雨量',
+                    type:'bar',
+                    barWidth: '60%',
+                    data:[ 22,33,45,100, 200, 270, 300, 250,150,34,20,10]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    }
+</script>
+</body>
+</html>

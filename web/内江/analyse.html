@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>分析</title>
+    <meta name="keys" content="灾情预测、内江师范">
+    <meta name="description" content="灾情预测、内江师范">
+
+    <link rel="stylesheet" href="lib/icono.min.css">
+    <link rel="stylesheet" href="style/base.css">
+
+    <style>
+        .query-results{
+            padding-top: 20px;
+            background-color: #d9dde0;
+
+            margin-bottom:20px;
+        }
+        .content{
+            background: #fff;
+        }
+        .query-result
+        {
+            height: 400px;
+            width: 100%;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="menu-head">
+        <h1>项目名称</h1>
+        <h3 class="sub-title">版权所有：内江师范学院</h3>
+    </div>
+    <ul>
+        <li class="menu-list">
+            <span><span class="icono-home"></span>&nbsp;&nbsp;首 页</span>
+            <ul style="display: none">
+                <li><a href="index.html">首 页</a></li>
+
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-rightArrow"></span>&nbsp;&nbsp;导 入</span>
+            <ul style="display: none;">
+                <li><a href="import.html">导入文件</a></li>
+
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-search"></span>&nbsp;&nbsp;查 询</span>
+            <ul style="display: none;">
+                <li><a href="search.html">查询</a></li>
+                <li><a href="analyse.html">分析</a></li>
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-gear"></span>&nbsp;&nbsp;设 置</span>
+            <ul style="display: none;">
+                <li><a href="#">降雨量</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="login.html">退出</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="main">
+    <div class="header">
+        <h3>分 析</h3>
+    </div>
+    <div class="content">
+
+        <div class="query-results">
+            <div class="query-result" id="analysis-result1"></div>
+        </div>
+        <div class="query-results">
+            <div class="query-result" id="analysis-result2"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="lib/jquery-mini.js"></script>
+<script src="js/com_menu.js"></script>
+<script src="lib/echarts.js"></script>
+<script>
+    $(function(){
+        switchMenu();//menu切换
+        lineGraph('#analysis-result1',
+                '内江市2016年月平均降水量折线图',
+                ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+                ['月平均降水量'],
+                [{
+                    name:'月平均降水量',
+                    type:'line',
+                    stack: '总量',
+                    data:[120, 132,101, 134, 90, 230, 210,120, 132,  101, 134, 90]
+                } ]);
+
+        lineGraph('#analysis-result2',
+                ' 各区县2016年月平均降水量折线图',
+                ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+                ['市中区','东兴区','隆昌县','资中县','威远县'],
+                [{
+                    name:'市中区',
+                    type:'line',
+                    data:[35, 132, 101, 134, 90, 230, 210,120, 132, 101, 45, 90]
+                }, {
+                    name: '东兴区',
+                    type: 'line',
+                    data: [54, 47, 132, 101, 54, 90,120, 132, 101, 134, 90, 34]
+                },{
+                    name:'隆昌县',
+                    type:'line',
+                    data:[ 56, 76, 90, 230, 21,120, 254, 275,120, 167, 134, 19]
+                },{
+                    name:'资中县',
+                    type:'line',
+                    data:[ 43, 54, 210,35,120, 132, 101, 321, 132, 89, 99, 23]
+                },
+                {
+                    name:'威远县',
+                    type:'line',
+                    data:[ 32,65, 130,120,180, 132, 231, 134, 156, 101, 111, 65]
+                }]);
+
+    })
+
+    function lineGraph(ident,title,dates,strs, datas){
+        var myChart_line1 = echarts.init(document.querySelector(ident));
+        option = {
+            title: {
+                text: title,
+                subtext: '@内江师范学院版权所有'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:strs
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: dates
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: datas
+        };
+        myChart_line1.setOption(option);
+    }
+
+</script>
+</body>
+</html>

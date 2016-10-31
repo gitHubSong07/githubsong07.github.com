@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>关于我们</title>
+    <meta name="keys" content="灾情预测、内江师范">
+    <meta name="description" content="灾情预测、内江师范">
+
+    <link rel="stylesheet" href="lib/icono.min.css">
+    <link rel="stylesheet" href="style/base.css">
+    <style>
+        .main{
+            padding-bottom: 20px;
+        }
+        .content-bg{
+            margin: -15px;
+            height: 300px;
+            background: url("lib/img/bgimg.jpg");
+            background-size: 100%;
+        }
+        .controller{
+            margin-top: 25px;
+        }
+        .p-text{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 1.4012;
+        }
+        .footer-text{
+            margin-top: 40px;
+            text-align: right;
+        }
+        .header-title{
+            color: #fff;
+            opacity: 0.8;
+            font: 40px "Adobe 楷体 Std R";
+
+            padding-top: 130px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="menu-head">
+        <h1>项目名称</h1>
+        <h3 class="sub-title">版权所有：内江师范学院</h3>
+    </div>
+    <ul>
+        <li class="menu-list">
+            <span><span class="icono-home"></span>&nbsp;&nbsp;首 页</span>
+            <ul style="display: none">
+                <li><a href="index.html">首 页</a></li>
+
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-rightArrow"></span>&nbsp;&nbsp;导 入</span>
+            <ul style="display: none;">
+                <li><a href="import.html">导入文件</a></li>
+
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-search"></span>&nbsp;&nbsp;查 询</span>
+            <ul style="display: none;">
+                <li><a href="search.html">查询</a></li>
+                <li><a href="analyse.html">分析</a></li>
+            </ul>
+        </li>
+        <li  class="menu-list">
+            <span><span class="icono-gear"></span>&nbsp;&nbsp;设 置</span>
+            <ul style="display: none;">
+                <li><a href="#">降雨量</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="login.html">退出</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="main">
+    <div class="header">
+        <h3>关于</h3>
+    </div>
+    <div class="content">
+        <div class="content-bg">
+            <h1 class="header-title">基于Web的灾情信息可视化发布研究</h1>
+        </div>
+        <div class="controller">
+            <h3>主要目标：</h3>
+            <p class="p-text">
+               建立异质异构的灾害信息的Web发布和可视化系统，将来源于不同部分的数据进行标准化包装，形成可供分布式检索系统检索的资源节点，系统以提供灾害信息的元数据检索界面，用户能够检索所需数据，数据在网络上以累进的方式进行传输。
+            </p>
+            <h3>主要内容： </h3>
+            <p class="p-text">
+                <h4>1.异构多源多接口资源动态封装与接入技术</h4><br>
+                主要围绕多种平台下，不同种类资源的统一封装与接入技术展开研究，资源动态封装是指通过专用软件工具在系统运行的过程中进行部署与配置来将共享资源（包括数据资源、应用处理资源以及知识资源）封装为符合标准定义的WebService，配置到相应的服务中去；资源动态接入技术是指在系统运行的过程中实现本地共享资源的更新，由交换中心通过查询服务获取最新的资源信息，使用户或客户程序可以通过相应的服务接口获取或调用相应的资源。（注：交换中心只存储交换元数据信息，不保存各节点的资源信息，对于每一此用户操作，交换中心都向各资源节点发送服务查询请求，获取最新资源及分类列表）。资源动态封装与接入技术是平台扩展能力的基础体现，好的设计可以具备很强的接入能力，目前接入技术可以针对特定资源进行设计，但在设计过程中要考虑扩展能力。
+            </p>
+            <p class="p-text">
+                <h4>2.分布式空间信息检索与自适应融合技术</h4><br>
+                分布式空间信息检索技术是支持对海量的分布式的空间信息库进行高效访问的核心技术，是本课题的技术难点之一。不同与通常意义上的空间信息库，本课题所研究的空间信息所得到并维护的空间信息库由于是不断地从Internet上分析和提取得到的，因此不具有空间完备性，时间完备性或主题完备性其中的任何一条。所以，对这样的空间信息库而言，常规的空间索引技术并没有很好的效果，课题需要在借鉴这些技术的基础上，研究更有效的分布式空间信息索引技术____基于Web 服务的分布式信息检索，其基本思路是：以Web 服务形式存在的服务器端检索程序负责从各自的数据库中检索数据；具有代理功能的客户端应用程序(可以是专用客户端或网关型客户端)负责向多个Web 服务同时发出调用命令并接收返回结果。
+
+            </p>
+            <p class="p-text">
+                <h4>3.基于SVG的灾情信息可视化发布</h4><br>
+                建立一个Web Agent，负责将各个资源节点获取的GML文档首先进行融合，然后转成SVG 文档。Web Agent定义各种空间信息的描述模版，Web Agent上有一个元数据数据库，每一个元数据对应一个样式表，如元数据LineString对应一个名为LineString.xsl的样式表。当GML文档向SVG转化时，先对GML文档进行遍历，将出现的元数据所对应的样式表集成，生成一个新的样式表，根据这个样式表将GML文档转化为SVG图像，再将SVG图像返回给用户。
+            </p>
+
+
+            <p class="footer-text">@2016 版权所有：内江师范学院</p>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="lib/jquery-mini.js"></script>
+<script src="js/com_menu.js"></script>
+<script>
+    switchMenu();//menu切换
+</script>
+</body>
+</html>
